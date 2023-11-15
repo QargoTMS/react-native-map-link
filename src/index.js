@@ -182,6 +182,9 @@ export async function showLocation(options) {
         url += `&startcoord=${sourceLatLng}`;
       }
       break;
+    case 'copilot':
+      url = `${prefixes.copilot}mydestination?type=LOCATION&action=GOTO&lat=${lat}&long=${lng}`;
+      break;
     case 'uber':
       url = `${prefixes.uber}?action=setPickup&dropoff[latitude]=${lat}&dropoff[longitude]=${lng}`;
 
